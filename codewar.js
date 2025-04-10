@@ -309,3 +309,75 @@ function opposite(number) {
     return url.split('.')[0];
   }
   
+  // 1 https://www.codewars.com/kata/5715eaedb436cf5606000381
+
+function positiveSum(array) {
+  let result = array.filter((item) => item > 0);
+  return result.reduce((item, sum) => sum + item, 0);
+}
+
+// 2 https://www.codewars.com/kata/5a3e1319b6486ac96f000049
+
+function pairs(array) {
+  let count = 0;
+  let sumlength = 0;
+  array.length % 2 ? (sumlength = array.length) : (sumlength = array.length - 1);
+  for (let i = 0; i < sumlength; i += 2) {
+    if (Math.abs(array[i] - array[i + 1]) === 1) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// 3 https://www.codewars.com/kata/5aba780a6a176b029800041c
+
+function maxMultiple(divisor, bound) {
+  let isDecimal = 0;
+  for (let i = bound; i > 0; i--) {
+    isDecimal = i / divisor;
+    if (isDecimal - Math.floor(isDecimal) === 0) {
+      return i;
+    }
+  }
+}
+
+// 4 https://www.codewars.com/kata/514a6336889283a3d2000001
+
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter((item) => item % 2 === 0);
+}
+
+// 5 https://www.codewars.com/kata/5a090c4e697598d0b9000004
+
+function solve(array) {
+  let resultArray = [];
+  array.sort((item1, item2) => {
+    return item1 - item2;
+  });
+  let sumLength = array.length - 1;
+  for (let i = 0; i < array.length / 2; i++) {
+    if (array[i] === array[sumLength - i]) {
+      resultArray.push(array[i]);
+      continue;
+    }
+    resultArray.push(array[sumLength - i]);
+    resultArray.push(array[i]);
+  }
+  return resultArray;
+}
+
+// 6 https://www.codewars.com/kata/566044325f8fddc1c000002c
+
+function evenChars(string) {
+  if (string.length < 2 || string.length > 100) {
+    return 'invalid string';
+  }
+  let newArray = string.split('').filter((item, index) => {
+    if (index % 2 !== 0) {
+      return item;
+    }
+  });
+  return newArray;
+}
