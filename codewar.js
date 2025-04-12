@@ -381,3 +381,38 @@ function evenChars(string) {
   });
   return newArray;
 }
+
+// 4. Random dates
+//Create a function that generate a random date between to dates
+const moment = require('moment');
+function randomDate(startDate, endDate) {
+  let start, end;
+  
+  if (startDate && typeof startDate === 'object' && startDate._isAMomentObject) {
+    start = startDate.valueOf(); 
+  } else {
+    start = new Date(startDate).getTime();
+  }
+  if (endDate && typeof endDate === 'object' && endDate._isAMomentObject) {
+    end = endDate.valueOf();
+  } else {
+    end = new Date(endDate).getTime();
+  }
+  const randomTimestamp = start + Math.random() * (end - start);
+  if (typeof moment === 'function') {
+    return moment(randomTimestamp);
+  }
+  
+  return new Date(randomTimestamp);
+}
+
+const date1 = moment('23/01/2021', 'DD/MM/YYYY');
+const date2 = moment('23/10/2021', 'DD/MM/YYYY');
+
+console.log(randomDate(date1, date2).format('DD/MM/YY'));
+// 20/02/2021
+
+//Codewars
+//5 Merged objects https://www.codewars.com/kata/merged-objects
+
+//6 This is antoher problem https://www.codewars.com/kata/547f1a8d4a437abdf800055c
