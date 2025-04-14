@@ -416,3 +416,45 @@ console.log(randomDate(date1, date2).format('DD/MM/YY'));
 //5 Merged objects https://www.codewars.com/kata/merged-objects
 
 //6 This is antoher problem https://www.codewars.com/kata/547f1a8d4a437abdf800055c
+
+// Task 1 https://www.codewars.com/kata/55e7650c8d894146be000095
+function validateMessage(msg) {
+  if (msg === null) {
+    throw new ReferenceError('Message is null!');
+  }
+
+  if (typeof msg !== "string") {
+    throw new TypeError(`Message should be of type string but was of type ${typeof msg}!`);
+  }
+
+  if (msg.length > 255 || msg.length === 0) {
+    throw new RangeError(`Message contains ${msg.length} characters!`);
+  }
+
+  if (/<[^>]+>/.test(msg)) {
+    return false;
+  }
+
+  return true;
+}
+
+//Taks 2
+
+
+//Task 3 setTimeout/setInterval
+let myInterval ;
+function timer(){
+  let i =1;
+   myInterval = setInterval(() => {
+      
+      console.log("Elaplsed time " +(i++) + " sec")
+      if(i === 5){
+          clearInterval(myInterval);
+      }
+      
+  }, 1000);
+  
+ 
+}
+
+timer();
