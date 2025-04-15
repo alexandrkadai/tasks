@@ -1,10 +1,10 @@
-// 1. http://www.codewars.com/kata/opposite-number
+// http://www.codewars.com/kata/opposite-number
 
 function opposite(number) {
     return -number;
   }
   
-  //2. http://www.codewars.com/kata/basic-mathematical-operations
+  //http://www.codewars.com/kata/basic-mathematical-operations
   
   function basicOp(operation, value1, value2) {
     if (operation === '+') {
@@ -22,13 +22,13 @@ function opposite(number) {
     return 0;
   }
   
-  // 3. http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
+  // http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
   
   function printArray(array) {
     return array.join();
   }
   
-  // 4. http://www.codewars.com/kata/transportation-on-vacation
+  // http://www.codewars.com/kata/transportation-on-vacation
   
   function rentalCarCost(days) {
     if (days >= 7) {
@@ -40,7 +40,7 @@ function opposite(number) {
     return days * 40;
   }
   
-  // 5. http://www.codewars.com/kata/calculating-with-functions
+  // http://www.codewars.com/kata/calculating-with-functions
   
   function zero(func) {
     return func ? func(0) : 0;
@@ -94,7 +94,7 @@ function opposite(number) {
     };
   }
   
-  // 6. http://www.codewars.com/kata/get-the-middle-character
+  // http://www.codewars.com/kata/get-the-middle-character
   
   function getMiddle(string) {
     if (string.length % 2 !== 0) {
@@ -112,7 +112,7 @@ function opposite(number) {
     }
   }
   
-  // 7. http://www.codewars.com/kata/partition-on
+  // http://www.codewars.com/kata/partition-on
   
   function partitionOn(pred, items) {
     const falseItems = [];
@@ -134,7 +134,7 @@ function opposite(number) {
     return falseItems.length;
   }
   
-  // 8. https://www.codewars.com/kata/find-the-odd-int/
+  // https://www.codewars.com/kata/find-the-odd-int/
   
   function findOdd(array) {
     const numberCounts = {};
@@ -151,7 +151,7 @@ function opposite(number) {
     }
   }
   
-  // 9. https://www.codewars.com/kata/find-the-parity-outlier
+  // https://www.codewars.com/kata/find-the-parity-outlier
   
   function findOutlier(integers) {
     let targetEven = 0;
@@ -175,7 +175,7 @@ function opposite(number) {
     }
   }
   
-  // 10. https://www.codewars.com/kata/zipwith
+  // https://www.codewars.com/kata/zipwith
   
   function zipWith(givenFunction, array1, array2) {
     let shortLength = 0;
@@ -189,7 +189,7 @@ function opposite(number) {
     return res;
   }
   
-  // 11. https://www.codewars.com/kata/filter-the-number
+  // https://www.codewars.com/kata/filter-the-number
   
   function filterString(value) {
     let result;
@@ -199,7 +199,7 @@ function opposite(number) {
     return parseInt(newInteger);
   }
   
-  // 12. https://www.codewars.com/kata/n-th-fibonacci
+  // https://www.codewars.com/kata/n-th-fibonacci
   
   function nthFibo(number) {
     if (number === 1) return 0;
@@ -218,7 +218,7 @@ function opposite(number) {
       secondNum = currentNum;
     }
   }
-  // 13. https://www.codewars.com/kata/cat-and-mouse-2d-version/
+  // https://www.codewars.com/kata/cat-and-mouse-2d-version/
   
   function catMouse(map, moves) {
     if (!map.includes('C') || !map.includes('m')) {
@@ -244,7 +244,7 @@ function opposite(number) {
     return distance <= moves ? 'Caught!' : 'Escaped!';
   }
   
-  // 14. https://www.codewars.com/kata/duplicate-encoder
+  // https://www.codewars.com/kata/duplicate-encoder
   
   function duplicateEncode(word) {
     const lowercaseWord = word.toLowerCase();
@@ -260,7 +260,7 @@ function opposite(number) {
       .join('');
   }
   
-  // 15. https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+  // https://www.codewars.com/kata/576757b1df89ecf5bd00073b
   
   function towerBuilder(nFloors) {
     const tower = [];
@@ -275,7 +275,7 @@ function opposite(number) {
     return tower;
   }
   
-  // 16. https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
+  // https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
   
   function wave(str) {
     const waveResult = [];
@@ -289,7 +289,7 @@ function opposite(number) {
     return waveResult;
   }
   
-  // 17. https://www.codewars.com/kata/59d398bb86a6fdf100000031
+  // https://www.codewars.com/kata/59d398bb86a6fdf100000031
   
   function stringBreakers(quantity, string) {
     let some = string.split(' ').join('');
@@ -302,21 +302,21 @@ function opposite(number) {
     return newstr.join('\n');
   }
   
-  // 18. https://www.codewars.com/kata/514a024011ea4fb54200004b
+  // https://www.codewars.com/kata/514a024011ea4fb54200004b
   
   function domainName(url) {
     url = url.replace(/(https?:\/\/)?(www\.)?/, '');
     return url.split('.')[0];
   }
   
-  // 1 https://www.codewars.com/kata/5715eaedb436cf5606000381
+  //https://www.codewars.com/kata/5715eaedb436cf5606000381
 
 function positiveSum(array) {
   let result = array.filter((item) => item > 0);
   return result.reduce((item, sum) => sum + item, 0);
 }
 
-// 2 https://www.codewars.com/kata/5a3e1319b6486ac96f000049
+// https://www.codewars.com/kata/5a3e1319b6486ac96f000049
 
 function pairs(array) {
   let count = 0;
@@ -331,7 +331,7 @@ function pairs(array) {
   return count;
 }
 
-// 3 https://www.codewars.com/kata/5aba780a6a176b029800041c
+// https://www.codewars.com/kata/5aba780a6a176b029800041c
 
 function maxMultiple(divisor, bound) {
   let isDecimal = 0;
@@ -343,13 +343,13 @@ function maxMultiple(divisor, bound) {
   }
 }
 
-// 4 https://www.codewars.com/kata/514a6336889283a3d2000001
+// https://www.codewars.com/kata/514a6336889283a3d2000001
 
 function getEvenNumbers(numbersArray) {
   return numbersArray.filter((item) => item % 2 === 0);
 }
 
-// 5 https://www.codewars.com/kata/5a090c4e697598d0b9000004
+// https://www.codewars.com/kata/5a090c4e697598d0b9000004
 
 function solve(array) {
   let resultArray = [];
@@ -368,7 +368,7 @@ function solve(array) {
   return resultArray;
 }
 
-// 6 https://www.codewars.com/kata/566044325f8fddc1c000002c
+// https://www.codewars.com/kata/566044325f8fddc1c000002c
 
 function evenChars(string) {
   if (string.length < 2 || string.length > 100) {
@@ -382,7 +382,7 @@ function evenChars(string) {
   return newArray;
 }
 
-// 4. Random dates
+// Random dates
 //Create a function that generate a random date between to dates
 const moment = require('moment');
 function randomDate(startDate, endDate) {
@@ -417,7 +417,7 @@ console.log(randomDate(date1, date2).format('DD/MM/YY'));
 
 //6 This is antoher problem https://www.codewars.com/kata/547f1a8d4a437abdf800055c
 
-// Task 1 https://www.codewars.com/kata/55e7650c8d894146be000095
+// https://www.codewars.com/kata/55e7650c8d894146be000095
 function validateMessage(msg) {
   if (msg === null) {
     throw new ReferenceError('Message is null!');
@@ -441,7 +441,7 @@ function validateMessage(msg) {
 //Taks 2
 
 
-//Task 3 setTimeout/setInterval
+//setTimeout/setInterval
 let myInterval ;
 function timer(){
   let i =1;
