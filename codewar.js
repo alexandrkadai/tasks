@@ -458,3 +458,36 @@ function timer(){
 }
 
 timer();
+// Create custom deep clone function.
+
+// const user = {
+//   username: 'testuser1',
+//   preferences: {
+//     sound: {
+//       maxValue: 50,
+//       value: 30,
+//     },
+//   },
+// };
+
+function clone(user) {
+  if (user === null || typeof user !== 'object') return user;
+
+  if (Array.isArray(user)) {
+    return user.map(item => clone(item));
+  }
+
+  const cloned = {};
+  for (let key in user) {
+    cloned[key] = clone(user[key]);
+  }
+
+  return cloned;
+}
+
+
+const clonedUser = clone(user);
+
+clonedUser.preferences.sound.maxValue = 70;
+
+console.log(user.preferences.sound.maxValue === clonedUser.preferences.sound.maxValue); // false
