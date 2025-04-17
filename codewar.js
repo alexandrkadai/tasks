@@ -491,3 +491,13 @@ const clonedUser = clone(user);
 clonedUser.preferences.sound.maxValue = 70;
 
 console.log(user.preferences.sound.maxValue === clonedUser.preferences.sound.maxValue); // false
+
+//Task 6. Digit or not
+
+function startsWithDigit(str) {
+  const regex = /^\d/;
+  return regex.test(str);
+}
+
+console.log(startsWithDigit("123abc")); // true
+console.log(startsWithDigit("abc123")); // false
