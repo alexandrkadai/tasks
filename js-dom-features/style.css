@@ -1,0 +1,37 @@
+body {
+  background-color: #f0ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+#buttonsWrapper {
+  display: grid;
+  grid-template-columns: repeat(20, 40px);
+  grid-template-rows: repeat(30, 40px);
+  gap: 2px;
+}
+.buttons {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: aqua;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.buttons.active {
+    background-color: blue;
+    color: white;
+  }
+  
+  .buttons.highlight {
+    background-color: lightblue;
+  }
