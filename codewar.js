@@ -1,315 +1,319 @@
 // http://www.codewars.com/kata/opposite-number
 
 function opposite(number) {
-    return -number;
+  return -number;
+}
+
+//http://www.codewars.com/kata/basic-mathematical-operations
+
+function basicOp(operation, value1, value2) {
+  if (operation === "+") {
+    return value1 + value2;
   }
-  
-  //http://www.codewars.com/kata/basic-mathematical-operations
-  
-  function basicOp(operation, value1, value2) {
-    if (operation === '+') {
-      return value1 + value2;
-    }
-    if (operation === '-') {
-      return value1 - value2;
-    }
-    if (operation === '*') {
-      return value1 * value2;
-    }
-    if (operation === '/') {
-      return value1 / value2;
-    }
-    return 0;
+  if (operation === "-") {
+    return value1 - value2;
   }
-  
-  // http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
-  
-  function printArray(array) {
-    return array.join();
+  if (operation === "*") {
+    return value1 * value2;
   }
-  
-  // http://www.codewars.com/kata/transportation-on-vacation
-  
-  function rentalCarCost(days) {
-    if (days >= 7) {
-      return days * 40 - 50;
-    }
-    if (days >= 3) {
-      return days * 40 - 20;
-    }
-    return days * 40;
+  if (operation === "/") {
+    return value1 / value2;
   }
-  
-  // http://www.codewars.com/kata/calculating-with-functions
-  
-  function zero(func) {
-    return func ? func(0) : 0;
+  return 0;
+}
+
+// http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
+
+function printArray(array) {
+  return array.join();
+}
+
+// http://www.codewars.com/kata/transportation-on-vacation
+
+function rentalCarCost(days) {
+  if (days >= 7) {
+    return days * 40 - 50;
   }
-  function one(func) {
-    return func ? func(1) : 1;
+  if (days >= 3) {
+    return days * 40 - 20;
   }
-  function two(func) {
-    return func ? func(2) : 2;
-  }
-  function three(func) {
-    return func ? func(3) : 3;
-  }
-  function four(func) {
-    return func ? func(4) : 4;
-  }
-  function five(func) {
-    return func ? func(5) : 5;
-  }
-  function six(func) {
-    return func ? func(6) : 6;
-  }
-  function seven(func) {
-    return func ? func(7) : 7;
-  }
-  function eight(func) {
-    return func ? func(8) : 8;
-  }
-  function nine(func) {
-    return func ? func(9) : 9;
-  }
-  
-  function plus(number) {
-    return function (number2) {
-      return number2 + number;
-    };
-  }
-  function minus(number) {
-    return function (number2) {
-      return number2 - number;
-    };
-  }
-  function times(number) {
-    return function (number2) {
-      return number2 * number;
-    };
-  }
-  function dividedBy(number) {
-    return function (number2) {
-      return Math.floor(number2 / number);
-    };
-  }
-  
-  // http://www.codewars.com/kata/get-the-middle-character
-  
-  function getMiddle(string) {
-    if (string.length % 2 !== 0) {
-      for (let i = 0; i < string.length; i++) {
-        if (i == (string.length - 1) / 2) {
-          return string[i];
-        }
+  return days * 40;
+}
+
+// http://www.codewars.com/kata/calculating-with-functions
+
+function zero(func) {
+  return func ? func(0) : 0;
+}
+function one(func) {
+  return func ? func(1) : 1;
+}
+function two(func) {
+  return func ? func(2) : 2;
+}
+function three(func) {
+  return func ? func(3) : 3;
+}
+function four(func) {
+  return func ? func(4) : 4;
+}
+function five(func) {
+  return func ? func(5) : 5;
+}
+function six(func) {
+  return func ? func(6) : 6;
+}
+function seven(func) {
+  return func ? func(7) : 7;
+}
+function eight(func) {
+  return func ? func(8) : 8;
+}
+function nine(func) {
+  return func ? func(9) : 9;
+}
+
+function plus(number) {
+  return function (number2) {
+    return number2 + number;
+  };
+}
+function minus(number) {
+  return function (number2) {
+    return number2 - number;
+  };
+}
+function times(number) {
+  return function (number2) {
+    return number2 * number;
+  };
+}
+function dividedBy(number) {
+  return function (number2) {
+    return Math.floor(number2 / number);
+  };
+}
+
+// http://www.codewars.com/kata/get-the-middle-character
+
+function getMiddle(string) {
+  if (string.length % 2 !== 0) {
+    for (let i = 0; i < string.length; i++) {
+      if (i == (string.length - 1) / 2) {
+        return string[i];
       }
+    }
+  } else {
+    for (let i = 0; i < string.length; i++) {
+      if (i == string.length / 2) {
+        return string[i - 1] + string[i];
+      }
+    }
+  }
+}
+
+// http://www.codewars.com/kata/partition-on
+
+function partitionOn(pred, items) {
+  const falseItems = [];
+  const trueItems = [];
+  for (let i = 0; i < items.length; i++) {
+    if (pred(items[i])) {
+      trueItems.push(items[i]);
     } else {
-      for (let i = 0; i < string.length; i++) {
-        if (i == string.length / 2) {
-          return string[i - 1] + string[i];
-        }
-      }
+      falseItems.push(items[i]);
     }
   }
-  
-  // http://www.codewars.com/kata/partition-on
-  
-  function partitionOn(pred, items) {
-    const falseItems = [];
-    const trueItems = [];
-    for (let i = 0; i < items.length; i++) {
-      if (pred(items[i])) {
-        trueItems.push(items[i]);
-      } else {
-        falseItems.push(items[i]);
-      }
-    }
-    items.splice(0, items.length);
-    for (let i = 0; i < falseItems.length; i++) {
-      items.push(falseItems[i]);
-    }
-    for (let i = 0; i < trueItems.length; i++) {
-      items.push(trueItems[i]);
-    }
-    return falseItems.length;
+  items.splice(0, items.length);
+  for (let i = 0; i < falseItems.length; i++) {
+    items.push(falseItems[i]);
   }
-  
-  // https://www.codewars.com/kata/find-the-odd-int/
-  
-  function findOdd(array) {
-    const numberCounts = {};
-    for (let number of array) {
-      if (numberCounts[number] === undefined) {
-        numberCounts[number] = 0;
-      }
-      numberCounts[number] = numberCounts[number] + 1;
+  for (let i = 0; i < trueItems.length; i++) {
+    items.push(trueItems[i]);
+  }
+  return falseItems.length;
+}
+
+// https://www.codewars.com/kata/find-the-odd-int/
+
+function findOdd(array) {
+  const numberCounts = {};
+  for (let number of array) {
+    if (numberCounts[number] === undefined) {
+      numberCounts[number] = 0;
     }
-    for (let number in numberCounts) {
-      if (numberCounts[number] % 2 !== 0) {
-        return Number(number);
-      }
+    numberCounts[number] = numberCounts[number] + 1;
+  }
+  for (let number in numberCounts) {
+    if (numberCounts[number] % 2 !== 0) {
+      return Number(number);
     }
   }
-  
-  // https://www.codewars.com/kata/find-the-parity-outlier
-  
-  function findOutlier(integers) {
-    let targetEven = 0;
-    let targetOdd = 0;
-    let countEven = 0;
-    let countOdd = 0;
-  
-    integers.forEach((int) => {
-      if (int % 2 === 0) {
-        countEven++;
-        targetEven = int;
-      } else {
-        countOdd++;
-        targetOdd = int;
-      }
-    });
-    if (countEven > countOdd) {
-      return targetOdd;
+}
+
+// https://www.codewars.com/kata/find-the-parity-outlier
+
+function findOutlier(integers) {
+  let targetEven = 0;
+  let targetOdd = 0;
+  let countEven = 0;
+  let countOdd = 0;
+
+  integers.forEach((int) => {
+    if (int % 2 === 0) {
+      countEven++;
+      targetEven = int;
     } else {
-      return targetEven;
+      countOdd++;
+      targetOdd = int;
     }
+  });
+  if (countEven > countOdd) {
+    return targetOdd;
+  } else {
+    return targetEven;
   }
-  
-  // https://www.codewars.com/kata/zipwith
-  
-  function zipWith(givenFunction, array1, array2) {
-    let shortLength = 0;
-    if (array1.length > array2.length) {
-      shortLength = ai.length;
-    } else shortLength = array1.length;
-    let res = [];
-    for (i = 0; i < shortLength; i++) {
-      res.push(givenFunction(array1[i], array2[i]));
+}
+
+// https://www.codewars.com/kata/zipwith
+
+function zipWith(givenFunction, array1, array2) {
+  let shortLength = 0;
+  if (array1.length > array2.length) {
+    shortLength = ai.length;
+  } else shortLength = array1.length;
+  let res = [];
+  for (i = 0; i < shortLength; i++) {
+    res.push(givenFunction(array1[i], array2[i]));
+  }
+  return res;
+}
+
+// https://www.codewars.com/kata/filter-the-number
+
+function filterString(value) {
+  let result;
+  let some = value.split("");
+  result = some.filter((integer) => !isNaN(integer));
+  let newInteger = result.join("");
+  return parseInt(newInteger);
+}
+
+// https://www.codewars.com/kata/n-th-fibonacci
+
+function nthFibo(number) {
+  if (number === 1) return 0;
+  if (number === 2 || number === 3) return 1;
+  if (number === 4) return 2;
+  let firstNum = 2;
+  let secondNum = 3;
+  let currentNum = 3;
+  for (let i = 5; i <= 1000; i++) {
+    if (i === number) {
+      console.log(currentNum);
+      return currentNum;
     }
-    return res;
+    currentNum = secondNum + firstNum;
+    firstNum = secondNum;
+    secondNum = currentNum;
   }
-  
-  // https://www.codewars.com/kata/filter-the-number
-  
-  function filterString(value) {
-    let result;
-    let some = value.split('');
-    result = some.filter((integer) => !isNaN(integer));
-    let newInteger = result.join('');
-    return parseInt(newInteger);
+}
+// https://www.codewars.com/kata/cat-and-mouse-2d-version/
+
+function catMouse(map, moves) {
+  if (!map.includes("C") || !map.includes("m")) {
+    return "boring without two animals";
   }
-  
-  // https://www.codewars.com/kata/n-th-fibonacci
-  
-  function nthFibo(number) {
-    if (number === 1) return 0;
-    if (number === 2 || number === 3) return 1;
-    if (number === 4) return 2;
-    let firstNum = 2;
-    let secondNum = 3;
-    let currentNum = 3;
-    for (let i = 5; i <= 1000; i++) {
-      if (i === number) {
-        console.log(currentNum);
-        return currentNum;
+  const mapArray = map.split("\n");
+  let catPos = null;
+  let mousePos = null;
+
+  for (let y = 0; y < mapArray.length; y++) {
+    for (let x = 0; x < mapArray[y].length; x++) {
+      if (mapArray[y][x] === "C") {
+        catPos = { x, y };
       }
-      currentNum = secondNum + firstNum;
-      firstNum = secondNum;
-      secondNum = currentNum;
-    }
-  }
-  // https://www.codewars.com/kata/cat-and-mouse-2d-version/
-  
-  function catMouse(map, moves) {
-    if (!map.includes('C') || !map.includes('m')) {
-      return 'boring without two animals';
-    }
-    const mapArray = map.split('\n');
-    let catPos = null;
-    let mousePos = null;
-  
-    for (let y = 0; y < mapArray.length; y++) {
-      for (let x = 0; x < mapArray[y].length; x++) {
-        if (mapArray[y][x] === 'C') {
-          catPos = { x, y };
-        }
-        if (mapArray[y][x] === 'm') {
-          mousePos = { x, y };
-        }
+      if (mapArray[y][x] === "m") {
+        mousePos = { x, y };
       }
     }
-  
-    const distance = Math.abs(catPos.x - mousePos.x) + Math.abs(catPos.y - mousePos.y);
-  
-    return distance <= moves ? 'Caught!' : 'Escaped!';
   }
-  
-  // https://www.codewars.com/kata/duplicate-encoder
-  
-  function duplicateEncode(word) {
-    const lowercaseWord = word.toLowerCase();
-  
-    const charCount = {};
-    for (let char of lowercaseWord) {
-      charCount[char] = (charCount[char] || 0) + 1;
+
+  const distance =
+    Math.abs(catPos.x - mousePos.x) + Math.abs(catPos.y - mousePos.y);
+
+  return distance <= moves ? "Caught!" : "Escaped!";
+}
+
+// https://www.codewars.com/kata/duplicate-encoder
+
+function duplicateEncode(word) {
+  const lowercaseWord = word.toLowerCase();
+
+  const charCount = {};
+  for (let char of lowercaseWord) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  return lowercaseWord
+    .split("")
+    .map((char) => (charCount[char] > 1 ? ")" : "("))
+    .join("");
+}
+
+// https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+
+function towerBuilder(nFloors) {
+  const tower = [];
+  for (let currentFloor = 0; currentFloor < nFloors; currentFloor++) {
+    const starsOnThisFloor = 2 * currentFloor + 1;
+    const spacesOnEachSide = nFloors - currentFloor - 1;
+    const floorString =
+      " ".repeat(spacesOnEachSide) +
+      "*".repeat(starsOnThisFloor) +
+      " ".repeat(spacesOnEachSide);
+    tower.push(floorString);
+  }
+
+  return tower;
+}
+
+// https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
+
+function wave(str) {
+  const waveResult = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      continue;
     }
-  
-    return lowercaseWord
-      .split('')
-      .map((char) => (charCount[char] > 1 ? ')' : '('))
-      .join('');
+    const waveVariation =
+      str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+    waveResult.push(waveVariation);
   }
-  
-  // https://www.codewars.com/kata/576757b1df89ecf5bd00073b
-  
-  function towerBuilder(nFloors) {
-    const tower = [];
-    for (let currentFloor = 0; currentFloor < nFloors; currentFloor++) {
-      const starsOnThisFloor = 2 * currentFloor + 1;
-      const spacesOnEachSide = nFloors - currentFloor - 1;
-      const floorString =
-        ' '.repeat(spacesOnEachSide) + '*'.repeat(starsOnThisFloor) + ' '.repeat(spacesOnEachSide);
-      tower.push(floorString);
-    }
-  
-    return tower;
+  return waveResult;
+}
+
+// https://www.codewars.com/kata/59d398bb86a6fdf100000031
+
+function stringBreakers(quantity, string) {
+  let some = string.split(" ").join("");
+  let string2 = some;
+  let newstr = [];
+  for (let i = 0; i < string2.length; i += quantity) {
+    let piece = string2.slice(i, i + quantity);
+    newstr.push(piece);
   }
-  
-  // https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
-  
-  function wave(str) {
-    const waveResult = [];
-    for (let i = 0; i < str.length; i++) {
-      if (str[i] === ' ') {
-        continue;
-      }
-      const waveVariation = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
-      waveResult.push(waveVariation);
-    }
-    return waveResult;
-  }
-  
-  // https://www.codewars.com/kata/59d398bb86a6fdf100000031
-  
-  function stringBreakers(quantity, string) {
-    let some = string.split(' ').join('');
-    let string2 = some;
-    let newstr = [];
-    for (let i = 0; i < string2.length; i += quantity) {
-      let piece = string2.slice(i, i + quantity);
-      newstr.push(piece);
-    }
-    return newstr.join('\n');
-  }
-  
-  // https://www.codewars.com/kata/514a024011ea4fb54200004b
-  
-  function domainName(url) {
-    url = url.replace(/(https?:\/\/)?(www\.)?/, '');
-    return url.split('.')[0];
-  }
-  
-  //https://www.codewars.com/kata/5715eaedb436cf5606000381
+  return newstr.join("\n");
+}
+
+// https://www.codewars.com/kata/514a024011ea4fb54200004b
+
+function domainName(url) {
+  url = url.replace(/(https?:\/\/)?(www\.)?/, "");
+  return url.split(".")[0];
+}
+
+//https://www.codewars.com/kata/5715eaedb436cf5606000381
 
 function positiveSum(array) {
   let result = array.filter((item) => item > 0);
@@ -321,7 +325,9 @@ function positiveSum(array) {
 function pairs(array) {
   let count = 0;
   let sumlength = 0;
-  array.length % 2 ? (sumlength = array.length) : (sumlength = array.length - 1);
+  array.length % 2
+    ? (sumlength = array.length)
+    : (sumlength = array.length - 1);
   for (let i = 0; i < sumlength; i += 2) {
     if (Math.abs(array[i] - array[i + 1]) === 1) {
       count++;
@@ -372,9 +378,9 @@ function solve(array) {
 
 function evenChars(string) {
   if (string.length < 2 || string.length > 100) {
-    return 'invalid string';
+    return "invalid string";
   }
-  let newArray = string.split('').filter((item, index) => {
+  let newArray = string.split("").filter((item, index) => {
     if (index % 2 !== 0) {
       return item;
     }
@@ -384,32 +390,36 @@ function evenChars(string) {
 
 // Random dates
 //Create a function that generate a random date between to dates
-const moment = require('moment');
+const moment = require("moment");
 function randomDate(startDate, endDate) {
   let start, end;
-  
-  if (startDate && typeof startDate === 'object' && startDate._isAMomentObject) {
-    start = startDate.valueOf(); 
+
+  if (
+    startDate &&
+    typeof startDate === "object" &&
+    startDate._isAMomentObject
+  ) {
+    start = startDate.valueOf();
   } else {
     start = new Date(startDate).getTime();
   }
-  if (endDate && typeof endDate === 'object' && endDate._isAMomentObject) {
+  if (endDate && typeof endDate === "object" && endDate._isAMomentObject) {
     end = endDate.valueOf();
   } else {
     end = new Date(endDate).getTime();
   }
   const randomTimestamp = start + Math.random() * (end - start);
-  if (typeof moment === 'function') {
+  if (typeof moment === "function") {
     return moment(randomTimestamp);
   }
-  
+
   return new Date(randomTimestamp);
 }
 
-const date1 = moment('23/01/2021', 'DD/MM/YYYY');
-const date2 = moment('23/10/2021', 'DD/MM/YYYY');
+const date1 = moment("23/01/2021", "DD/MM/YYYY");
+const date2 = moment("23/10/2021", "DD/MM/YYYY");
 
-console.log(randomDate(date1, date2).format('DD/MM/YY'));
+console.log(randomDate(date1, date2).format("DD/MM/YY"));
 // 20/02/2021
 
 //Codewars
@@ -420,11 +430,13 @@ console.log(randomDate(date1, date2).format('DD/MM/YY'));
 // https://www.codewars.com/kata/55e7650c8d894146be000095
 function validateMessage(msg) {
   if (msg === null) {
-    throw new ReferenceError('Message is null!');
+    throw new ReferenceError("Message is null!");
   }
 
   if (typeof msg !== "string") {
-    throw new TypeError(`Message should be of type string but was of type ${typeof msg}!`);
+    throw new TypeError(
+      `Message should be of type string but was of type ${typeof msg}!`,
+    );
   }
 
   if (msg.length > 255 || msg.length === 0) {
@@ -440,21 +452,16 @@ function validateMessage(msg) {
 
 //Taks 2
 
-
 //setTimeout/setInterval
-let myInterval ;
-function timer(){
-  let i =1;
-   myInterval = setInterval(() => {
-      
-      console.log("Elaplsed time " +(i++) + " sec")
-      if(i === 5){
-          clearInterval(myInterval);
-      }
-      
+let myInterval;
+function timer() {
+  let i = 1;
+  myInterval = setInterval(() => {
+    console.log("Elaplsed time " + i++ + " sec");
+    if (i === 5) {
+      clearInterval(myInterval);
+    }
   }, 1000);
-  
- 
 }
 
 timer();
@@ -471,10 +478,10 @@ timer();
 // };
 
 function clone(user) {
-  if (user === null || typeof user !== 'object') return user;
+  if (user === null || typeof user !== "object") return user;
 
   if (Array.isArray(user)) {
-    return user.map(item => clone(item));
+    return user.map((item) => clone(item));
   }
 
   const cloned = {};
@@ -485,12 +492,13 @@ function clone(user) {
   return cloned;
 }
 
-
 const clonedUser = clone(user);
 
 clonedUser.preferences.sound.maxValue = 70;
 
-console.log(user.preferences.sound.maxValue === clonedUser.preferences.sound.maxValue); // false
+console.log(
+  user.preferences.sound.maxValue === clonedUser.preferences.sound.maxValue,
+); // false
 
 //Task 6. Digit or not
 
@@ -507,20 +515,22 @@ async function sayJoke(apiUrl, jokeId) {
   const response = await fetch(apiUrl);
   const data = await response.json();
 
-  
-if(!data.jokes) {
-  throw new Error(`No jokes at url: ${apiUrl}`);
-}
+  if (!data.jokes) {
+    throw new Error(`No jokes at url: ${apiUrl}`);
+  }
 
-  const joke = data.jokes.find(joke => joke.id === jokeId);
+  const joke = data.jokes.find((joke) => joke.id === jokeId);
 
   if (!joke) {
     throw new Error(`No jokes found id: ${jokeId}`);
   }
-  
-  return {
-    saySetup: function() { return joke.setup},
-    sayPunchLine: function(){ return joke.punchLine}
-  };
 
+  return {
+    saySetup: function () {
+      return joke.setup;
+    },
+    sayPunchLine: function () {
+      return joke.punchLine;
+    },
+  };
 }

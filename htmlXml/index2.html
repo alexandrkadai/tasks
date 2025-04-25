@@ -1,33 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css">
-  <title>Runners</title>
-</head>
-<body>
-  <h2>Runners</h2>
-  <ul id="user-list"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Runners</title>
+  </head>
+  <body>
+    <h2>Runners</h2>
+    <ul id="user-list"></ul>
 
-  <script>
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://randomuser.me/api/?gender=female&results=10");
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        const data = JSON.parse(xhr.responseText);
-        const users = data.results;
-        const userList = document.getElementById("user-list");
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://randomuser.me/api/?gender=female&results=10");
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const data = JSON.parse(xhr.responseText);
+          const users = data.results;
+          const userList = document.getElementById("user-list");
 
-        users.forEach(user => {
-          const li = document.createElement("li");
-          li.innerHTML = `<img src="${user.picture.thumbnail}" alt="User photo"> ${user.name.title} ${user.name.first} ${user.name.last}`;
-          userList.appendChild(li);
-        });
-      } else {
-        console.error("Error loading data:", xhr.status);
-      }
-    };
-    xhr.send();
-  </script>
-</body>
+          users.forEach((user) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<img src="${user.picture.thumbnail}" alt="User photo"> ${user.name.title} ${user.name.first} ${user.name.last}`;
+            userList.appendChild(li);
+          });
+        } else {
+          console.error("Error loading data:", xhr.status);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
 </html>

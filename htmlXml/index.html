@@ -1,28 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css">
-  <title>Runners</title>
-</head>
-<body>
-  <h2>Runners</h2>
-  <ul id="user-list"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Runners</title>
+  </head>
+  <body>
+    <h2>Runners</h2>
+    <ul id="user-list"></ul>
 
-  <script>
-    fetch("https://randomuser.me/api/?gender=female&results=10")
-      .then(response => response.json())
-      .then(data => {
-        const users = data.results;
-        const userList = document.getElementById("user-list");
+    <script>
+      fetch("https://randomuser.me/api/?gender=female&results=10")
+        .then((response) => response.json())
+        .then((data) => {
+          const users = data.results;
+          const userList = document.getElementById("user-list");
 
-        users.forEach(user => {
-          const li = document.createElement("li");
-          li.innerHTML = `<img src="${user.picture.thumbnail}" alt="User photo"> ${user.name.title} ${user.name.first} ${user.name.last}`;
-          userList.appendChild(li);
-        });
-      })
-      .catch(error => console.error("Error fetching users:", error));
-  </script>
-</body>
+          users.forEach((user) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<img src="${user.picture.thumbnail}" alt="User photo"> ${user.name.title} ${user.name.first} ${user.name.last}`;
+            userList.appendChild(li);
+          });
+        })
+        .catch((error) => console.error("Error fetching users:", error));
+    </script>
+  </body>
 </html>
