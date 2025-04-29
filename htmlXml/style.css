@@ -2,6 +2,22 @@ h2 {
   text-align: center;
   color: purple;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+fieldset {
+  width: 300px;
+}
+.from-item__title {
+  display: block;
+  margin-top: 10px;
+}
+.form-item {
+  display: block;
+  margin-top: 10px;
+}
 #user-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

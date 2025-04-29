@@ -7,22 +7,46 @@
   </head>
   <body>
     <h2>Runners</h2>
+    <div class="wrapper">
+      <fieldset>
+        <legend>Select a method to fetch data:</legend>
+
+        <div>
+          <input type="radio" id="fetch" name="fetchMethod" value="fetch" checked />
+          <label for="fetch">Fetch</label>
+        </div>
+
+        <div>
+          <input type="radio" id="XML" name="fetchMethod" value="XML" />
+          <label for="XML">XML</label>
+        </div>
+        <button id="filters">Load Users</button>
+      </fieldset>
+
+      <div id="form-wrapper">
+        <fieldset>
+          <legend>Select a gender and quantity of runners:</legend>
+          <span class="from-item__title">Please Select gender</span>
+          <div class="form-item">
+            <input type="radio" id="gender" name="gender" value="male" checked />
+            <label for="fetch">Male</label>
+          </div>
+          <div class="form-item">
+            <input type="radio" id="gender" name="gender" value="female" />
+            <label for="fetch">Female</label>
+          </div>
+
+          <span class="from-item__title">Please Select quantity</span>
+          <div class="form-item">
+            <label for="quantity">Select from 1 to 30 </label>
+            <input type="number" name="quantity" id="runnerQuantity" min="1" max="30" />
+          </div>
+          <button id="loadMethod">Update users</button>
+        </fieldset>
+      </div>
+    </div>
     <ul id="user-list"></ul>
-
-    <script>
-      fetch("https://randomuser.me/api/?gender=female&results=10")
-        .then((response) => response.json())
-        .then((data) => {
-          const users = data.results;
-          const userList = document.getElementById("user-list");
-
-          users.forEach((user) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<img src="${user.picture.thumbnail}" alt="User photo"> ${user.name.title} ${user.name.first} ${user.name.last}`;
-            userList.appendChild(li);
-          });
-        })
-        .catch((error) => console.error("Error fetching users:", error));
-    </script>
   </body>
+
+  <script src="connection.js"></script>
 </html>
